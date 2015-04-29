@@ -1,15 +1,4 @@
 /**
-<<<<<<< HEAD
-  * A program that generates responses 
-  * based on Last Order's personality
-  * This version:
-  *      Uses advanced search for keywords
-  *      Will transform statements as well as react to keywords
-  *      Uses an array to hold default reponses
-  * @author Alyssa Evans
-  * @version April 20, 2015
-  */
-=======
  * A program that generates responses 
  * based on Last Order's personality
  * This version:
