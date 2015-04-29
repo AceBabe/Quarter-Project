@@ -119,4 +119,3 @@ public class LastOrder
 		return findKeyword (statement, goal, 0);
 	}
 }
->>>>>>> origin/LastOrder
