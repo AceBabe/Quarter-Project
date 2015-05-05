@@ -1,1 +1,31 @@
+import java.util.Scanner;
 
+/**
+ * A class to run the bots and their prearranged conversation.
+ * 
+ * @author (Alyssa Evans and Dayna Lei) 
+ * @version (5-5-15)
+ */
+public class Runner
+{
+    public static void main(String [] args)
+    {
+        Accel accel = new Accel();
+        LastOrder last = new LastOrder();
+        Computer compute = new Computer();
+        Kira kira = new Kira();
+        Miyumi miyu = new Miyumi();
+        Nanami nana = new Nanami();
+        Ryuuri ryuu = new Ryuuri();
+        
+        System.out.println(accel.getOpening());
+        Scanner in = new Scanner (System.in);
+        String statement = in.nextLine();
+        
+        while (!statement.equals("Error Message #3: Intruders successfully exterminated."))
+        {
+            accel.getResponse(statement);
+            statement = in.nextLine();
+        }
+    }
+}
