@@ -1,4 +1,4 @@
-/**
+﻿/**
  * A program that generates responses 
  * based on Last Order's personality
  * This version:
@@ -9,24 +9,20 @@
  * @version April 20, 2015
  */
 public class LastOrder
-{
-    /**
-     * Opening to the conversation
-     */
-    public String getOpening()
-    {
-        return ("You should’ve been paying attention! says Misaka as Misaka chastises the child in front of her.");
-    }
-    
+{  
     /**
      * Responds to the statements made by the other bots 
      * @param statement
      * @ return a response based on the rules given
      */
-    public String getResponses(String statement)
+    public void getResponses(String statement)
     {
         String response = "";
-        if (findKeyword(statement, "I’m a higher level") >= 0)
+        if (findKeyword(staetement, "But I'm Ryuuri, ne!"))
+	{
+	    response = "You should’ve been paying attention! says Misaka as Misaka chastises the child in front of her.";
+	}
+	else if (findKeyword(statement, "I’m a higher level") >= 0)
         {
             response = "Your power doesn’t even have any destructive power like Misaka’s! says Misaka as Misaka puffs out her chest with pride.";
         }
@@ -46,20 +42,20 @@ public class LastOrder
         {
             response = "Misaka senses great danger! says Misaka as Misaka quickly hides!";
         }
-        return response;
+        System.out.println(response);
     }
     
     /**
      * To continue the response of silence
      */
-    public String getSilence()
+    public void getSilence()
     {
         String si = "";
         if (Ryuuri.getSilence() == true)
         {
             si = "...";
         }
-        return si;
+        System.out.println(si);
     }
     
     /**
