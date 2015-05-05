@@ -5,8 +5,8 @@
  *      Uses advanced search for keywords
  *      Will transform statements as well as react to keywords
  *      Uses an array to hold default reponses
- * @author Alyssa Evans + Dayna Lei
- * @version April 20, 2015
+ * @author (Alyssa Evans + Dayna Lei)
+ * @version (April 20, 2015)
  */
 public class LastOrder
 {  
