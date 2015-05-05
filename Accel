@@ -1,23 +1,23 @@
-/**
+﻿/**
  * A program based on the personality of the #1 Esper Accelerator from A Certain Magical Index.
  * 
- * @Dayna Lei & Alyssa Evans
- * @1
+ * @author (Dayna Lei & Alyssa Evans)
+ * @version (April 29, 2015)
  */
 public class Accel
 {
     /**
      * Default greeting.
      */
-    public String getOpening()
+    public void getOpening()
     {
-        return "Yo. Why did you scumbags call me here? Waste of time…";
+        System.out.println("Yo. Why did you scumbags call me here? Waste of time…");
     }
 
     /**
      * Responds to the statements provided by the other chatbots.
      */
-    public String getResponse(String statement)
+    public void getResponse(String statement)
     {
         String response = "";
         if (findKeyword(statement, "This could be important.") >=0)
@@ -48,17 +48,17 @@ public class Accel
         {
             response = "Probably. Get behind us and make sure Last Order and Ryuuri stay safe.";
         }
-        return response;
+        System.out.println(response);
     }
 
-    public String startSilence(String statement)
+    public void startSilence()
     {
         String response = "";
         if (findKeyword(statement, "why have we been transported here?") >= 0)
         {
             response = "...";   
         }
-        return response;
+        System.out.println(response);
     }
 
     /**
