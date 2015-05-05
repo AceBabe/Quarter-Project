@@ -1,1 +1,119 @@
+/**
+ * A program based on the personality of original character Kira Fokutsuke.
+ * 
+ * @Dayna Lei and Alyssa Evans 
+ * @1
+ */
+public class Kira
+{
+    /**
+     * Responds to the statements provided by other chatbots. 
+     */
+    public void getResponse(String statement)
+    {
+        String response = "";
+        if (findKeyword(statement, "Waste of time…") >= 0)
+        {
+            response = "No idea, although I wouldn’t suggest you destroy everything in a fit of rage.";
+        }
+        else if (findKeyword(statement, "You don’t have a chest.") >= 0)
+        {
+            response = "*smacks Nanami* SHUT UP! You’re annoying!";
+        } 
+        else if (findKeyword(statement, "Don’t be mean to Nanami!") >= 0)
+        {
+            response = "Do you want me to hurt you?";
+        }
+        else if (findKeyword(statement, "why do you have such a scary face on?") >= 0)
+        {
+            response = "WHY DO YOU THINK, I GOT KICKED IN THE KNEE!";
+        }
+        else if (findKeyword(statement, "How did we even get here?") >= 0)
+        {
+            response = "It’s not entirely fabricated. Using her electromagnetic abilities, she can bounce the waves off the surrounding area, similar to my ability with the air molecules. However, we’re clearly not in a room or in the physical universe, so Last Order is definitely lying.";
+        }
+        else if (findKeyword(statement, "It’s obvious we’ve been transported to inside a machine.") >= 0)
+        {
+            response = "Oi! You in front of the computer screen, why have we been transported here?";
+        }
+        else if (findKeyword(statement, "I mean, come on bruh.") >= 0)
+        {
+            response = "You just keep on testing me, don’t you?";
+        }
+        else if (findKeyword(statement, "I, on the other hand…") >= 0)
+        {
+            response = "Waaaiiit. If you mess with the electronic signals, we might never get out of here.";
+        }
+        else if (findKeyword(statement, "Temper. Temper.") >= 0)
+        {
+            response = "*throws a streak of lightning at the ground by Nanami and Miyumi* Accelerator, you were wrong. There is something for me to manipulate here.";
+        }
+        else if (findKeyword(statement, " Get behind us and make sure Last Order and Ryuuri stay safe.") >= 0)
+        {
+            response = "I wonder how much damage I can do to a computer...I don’t want to use electricity in case it makes things worse...Ehhh, this is hard.";
+        }
+    }
 
+    public void getSilence()
+    {
+        String response = "";
+        if (Accel.startSilence() == true)
+        {
+            response = "...";
+        }
+        System.out.println(response);
+    }
+
+    public void endSilence()
+    {
+        String response = "";
+        if (LastOrder.getSilence() == true)
+        {
+            response = "Tch. No response.";
+        }
+        System.out.println(response);
+    }
+
+    private int findKeyword(String statement, String goal, int startPos)
+    {
+        String phrase = statement.trim();
+        //  The only change to incorporate the startPos is in the line below
+        int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
+        //  Refinement--make sure the goal isn't part of a word 
+        while (psn >= 0) 
+        {
+            //  Find the string of length 1 before and after the word
+            String before = " ", after = " "; 
+            if (psn > 0)
+            {
+                before = phrase.substring (psn - 1, psn).toLowerCase();
+            }
+            if (psn + goal.length() < phrase.length())
+            {
+                after = phrase.substring(psn + goal.length(), psn + goal.length() + 1).toLowerCase();
+            }
+            //  If before and after aren't letters, we've found the word
+            if (((before.compareTo ("a") < 0 ) || (before.compareTo("z") > 0))  //  before is not a letter
+            && ((after.compareTo ("a") < 0 ) || (after.compareTo("z") > 0)))
+            {
+                return psn;
+            }
+            //  The last position didn't work, so let's find the next, if there is one.
+            psn = phrase.indexOf(goal.toLowerCase(), psn + 1);
+        }
+        return -1;
+    }
+
+    /**
+     * Search for one word in phrase.  The search is not case sensitive.
+     * This method will check that the given goal is not a substring of a longer string
+     * (so, for example, "I know" does not contain "no").  The search begins at the beginning of the string.  
+     * @param statement the string to search
+     * @param goal the string to search for
+     * @return the index of the first occurrence of goal in statement or -1 if it's not found
+     */
+    private int findKeyword(String statement, String goal)
+    {
+        return findKeyword (statement, goal, 0);
+    }
+}
