@@ -3,8 +3,8 @@ import java.util.Scanner;
 /**
  * A class to run the bots and their prearranged conversation.
  * 
- * @author (Alyssa Evans and Dayna Lei) 
- * @version (5-5-15)
+ * @author (Alyssa Evans + Dayna Lei) 
+ * @version (May 5, 2015)
  */
 public class Runner
 {
@@ -18,13 +18,19 @@ public class Runner
         Nanami nana = new Nanami();
         Ryuuri ryuu = new Ryuuri();
         
-        System.out.println(accel.getOpening());
+        accel.getOpening();
         Scanner in = new Scanner (System.in);
         String statement = in.nextLine();
         
         while (!statement.equals("Error Message #3: Intruders successfully exterminated."))
         {
             accel.getResponse(statement);
+	    last.getResponse(statement);
+	    compute.getResponse(statement);
+	    kira.getResponse(statement);
+	    miyu.getResponse(statement);
+	    nana.getResponse(statement);
+	    ryuu.getResponse(statement);
             statement = in.nextLine();
         }
     }
