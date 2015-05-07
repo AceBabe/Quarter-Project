@@ -38,15 +38,23 @@ public class Ryuuri
         }
         System.out.println(response);
     }
-
-    public void getSilence()
+    
+    public boolean check(String statement)
     {
+        getResponse(statement);
+        return true;
+    }
+
+    public boolean getSilence()
+    {
+        Nanami n = new Nanami();
         String response = "";
-        if (Nanami.getSilence() == true)
+        if (n.getSilence() == true)
         {
             response = "...";
         }
         System.out.println(response);
+        return true;
     }
 
     private int findKeyword(String statement, String goal, int startPos)
@@ -92,4 +100,3 @@ public class Ryuuri
         return findKeyword (statement, goal, 0);
     }
 }
-
