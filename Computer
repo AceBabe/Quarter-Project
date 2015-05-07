@@ -9,7 +9,7 @@ public class Computer
     /**
      * Responds to the statements provided by the other chatbots.
      */
-    public String getResponse(String statement)
+    public void getResponse(String statement)
     {
         String response = "";
         if (findKeyword(statement, "There is something for me to manipulate here.") >= 0)
@@ -24,7 +24,13 @@ public class Computer
         {
             response = "Error Message #3: Intruders successfully exterminated.";
         }
-        return response;
+        System.out.println(response);
+    }
+    
+    public boolean check(String statement)
+    {
+        getResponse(statement);
+        return true;
     }
 
     /**
