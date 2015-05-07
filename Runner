@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.io.FileReader;
+import java.io.PrintStream;
 
 /**
  * A class to run the bots and their prearranged conversation.
@@ -17,21 +19,36 @@ public class Runner
         Miyumi miyu = new Miyumi();
         Nanami nana = new Nanami();
         Ryuuri ryuu = new Ryuuri();
-        
+
         accel.getOpening();
-        Scanner in = new Scanner (System.in);
-        String statement = in.nextLine();
-        
-        while (!statement.equals("Error Message #3: Intruders successfully exterminated."))
+
+        Scanner in = new Scanner(System.in);
+        String infile = "read.txt";
+        try
         {
-            accel.getResponse(statement);
-	    last.getResponse(statement);
-	    compute.getResponse(statement);
-	    kira.getResponse(statement);
-	    miyu.getResponse(statement);
-	    nana.getResponse(statement);
-	    ryuu.getResponse(statement);
-            statement = in.nextLine();
+            //File to be read
+            FileReader inReader = new FileReader(infile);
+            while(inReader.ready())
+            {
+                inReader.read();
+                String statement = in.nextLine();
+                while (!statement.equals("Error Message #3: Intruders successfully exterminated."))
+                {
+                    accel.getResponse(statement);
+                    last.getResponse(statement);
+                    compute.getResponse(statement);
+                    kira.getResponse(statement);
+                    miyu.getResponse(statement);
+                    nana.getResponse(statement);
+                    ryuu.getResponse(statement);
+                    statement = in.nextLine();
+                }
+                inReader.close();
+            }
         }
+        catch (java.io.IOException e)
+        {
+            System.out.println("FILE NOT FOUND");
+        } 
     }
 }
