@@ -52,26 +52,37 @@ public class Kira
         {
             response = "I wonder how much damage I can do to a computer...I don’t want to use electricity in case it makes things worse...Ehhh, this is hard.";
         }
+        System.out.println(response);
+    }
+    
+    public boolean check(String statement)
+    {
+        getResponse(statement);
+        return true;
     }
 
-    public void getSilence()
+    public boolean getSilence()
     {
+        Accel a = new Accel();
         String response = "";
-        if (Accel.startSilence() == true)
+        if (a.startSilence("why have we been transported here?") == true)
         {
             response = "...";
         }
         System.out.println(response);
+        return true;
     }
 
-    public void endSilence()
+    public boolean endSilence()
     {
+        LastOrder l = new LastOrder();
         String response = "";
-        if (LastOrder.getSilence() == true)
+        if (l.getSilence() == true)
         {
             response = "Tch. No response.";
         }
         System.out.println(response);
+        return true;
     }
 
     private int findKeyword(String statement, String goal, int startPos)
