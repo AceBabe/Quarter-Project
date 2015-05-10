@@ -9,7 +9,7 @@ public class Ryuuri
     /**
      * Responds to the statements provided by other chatbots. 
      */
-    public void getResponse(String statement)
+    public static String getResponse(String statement)
     {
         String response = "";
         if (findKeyword(statement, "Stop being mean to your sister.") >= 0)
@@ -36,16 +36,10 @@ public class Ryuuri
         {
             response = "I'll join you!";
         }
-        System.out.println(response);
-    }
-    
-    public boolean check(String statement)
-    {
-        getResponse(statement);
-        return true;
+        return(response);
     }
 
-    public boolean getSilence()
+    public static boolean getSilence()
     {
         Nanami n = new Nanami();
         String response = "";
@@ -57,7 +51,7 @@ public class Ryuuri
         return true;
     }
 
-    private int findKeyword(String statement, String goal, int startPos)
+    private static int findKeyword(String statement, String goal, int startPos)
     {
         String phrase = statement.trim();
         //  The only change to incorporate the startPos is in the line below
@@ -95,7 +89,7 @@ public class Ryuuri
      * @param goal the string to search for
      * @return the index of the first occurrence of goal in statement or -1 if it's not found
      */
-    private int findKeyword(String statement, String goal)
+    private static int findKeyword(String statement, String goal)
     {
         return findKeyword (statement, goal, 0);
     }
