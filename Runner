@@ -1,15 +1,15 @@
-import java.util.Scanner;
-import java.io.FileReader;
-import java.io.PrintStream;
+import java.util.ArrayList;
 
 /**
  * A class to run the bots and their prearranged conversation.
  * 
  * @author (Alyssa Evans + Dayna Lei) 
- * @version (May 5, 2015)
+ * @version (May 10, 2015)
  */
-public class Runner
+public class Runner2
 {
+    private static ArrayList <String> store;
+
     public static void main(String [] args)
     {
         Accel accel = new Accel();
@@ -19,36 +19,132 @@ public class Runner
         Miyumi miyu = new Miyumi();
         Nanami nana = new Nanami();
         Ryuuri ryuu = new Ryuuri();
+        store = new ArrayList <String> ();
+        store.add(accel.getOpening());
+        int x = sizeOfArrayList()-1;
 
-        accel.getOpening();
+        store.add(kira.getResponse(store.get(x)));
+        x++;
+        store.add(miyu.getResponse(store.get(x)));
+        x++;
+        store.add(accel.getResponse(store.get(x)));
+        x++;
+        store.add(nana.getResponse(store.get(x)));
+        x++;
+        store.add(ryuu.getResponse(store.get(x)));
+        x++;
+        store.add(last.getResponse(store.get(x)));
+        x++;
+        store.add(ryuu.getResponse(store.get(x)));
+        x++;
+        store.add(last.getResponse(store.get(x)));
+        x++;
+        store.add(nana.getResponse(store.get(x)));
+        x++;
+        store.add(kira.getResponse(store.get(x)));
+        x++;
+        store.add(last.getResponse(store.get(x)));
+        x++;
+        store.add(miyu.getResponse(store.get(x)));
+        x++;
+        store.add(kira.getResponse(store.get(x)));
+        x++;
+        store.add(accel.getResponse(store.get(x)));
+        x++;
+        store.add(miyu.getResponse(store.get(x)));
+        x++;
+        store.add(ryuu.getResponse(store.get(x)));
+        x++;
+        store.add(kira.getResponse(store.get(x)));
+        x++;
+        store.add(ryuu.getResponse(store.get(x)));
+        x++;
+        store.add(miyu.getResponse(store.get(x)));
+        x++;
+        store.add(accel.getResponse(store.get(x)));
+        x++;
+        //         store.add(miyu.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(accel.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(last.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(nana.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(last.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(nana.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(kira.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(ryuu.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(accel.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(kira.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(accel.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(kira.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(miyu.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(nana.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(ryuu.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(last.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(kira.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(nana.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(kira.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(accel.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(kira.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(miyu.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(nana.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(miyu.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(kira.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(compute.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(nana.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(accel.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(compute.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(last.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(ryuu.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(miyu.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(accel.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(kira.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(miyu.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(nana.getResponse(store.get(x)));
+        //         x++;
+        //         store.add(compute.getResponse(store.get(x)));
 
-        Scanner in = new Scanner(System.in);
-        String infile = "read.txt";
-        try
+        for (String q: store)
         {
-            //File to be read
-            FileReader inReader = new FileReader(infile);
-            while(inReader.ready())
-            {
-                inReader.read();
-                String statement = in.nextLine();
-                while (!statement.equals("Error Message #3: Intruders successfully exterminated."))
-                {
-                    accel.getResponse(statement);
-                    last.getResponse(statement);
-                    compute.getResponse(statement);
-                    kira.getResponse(statement);
-                    miyu.getResponse(statement);
-                    nana.getResponse(statement);
-                    ryuu.getResponse(statement);
-                    statement = in.nextLine();
-                }
-                inReader.close();
-            }
+            System.out.println(q);
         }
-        catch (java.io.IOException e)
-        {
-            System.out.println("FILE NOT FOUND");
-        } 
+    }
+
+    public static int sizeOfArrayList()
+    {
+        return store.size();
     }
 }
