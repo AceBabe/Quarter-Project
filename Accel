@@ -9,15 +9,15 @@ public class Accel
     /**
      * Default greeting.
      */
-    public void getOpening()
+    public static String getOpening()
     {
-        System.out.println("Yo. Why did you scumbags call me here? Waste of time…");
+        return("Yo. Why did you scumbags call me here? Waste of time…");
     }
 
     /**
      * Responds to the statements provided by the other chatbots.
      */
-    public void getResponse(String statement)
+    public static String getResponse(String statement)
     {
         String response = "";
         if (findKeyword(statement, "This could be important.") >=0)
@@ -48,24 +48,17 @@ public class Accel
         {
             response = "Probably. Get behind us and make sure Last Order and Ryuuri stay safe.";
         }
-        System.out.println(response);
-    }
-    
-    public boolean check(String statement)
-    {
-        getResponse(statement);
-        return true;
+        return(response);
     }
 
-    public boolean startSilence(String statement)
+    public static String startSilence(String statement)
     {
         String response = "";
         if (findKeyword(statement, "why have we been transported here?") >= 0)
         {
             response = "...";   
         }
-        System.out.println(response);
-        return true;
+        return response;
     }
 
     /**
@@ -76,7 +69,7 @@ public class Accel
      * @param startPos the character of the string to begin the search at
      * @return the index of the first occurrence of goal in statement or -1 if it's not found
      */
-    private int findKeyword(String statement, String goal, int startPos)
+    private static int findKeyword(String statement, String goal, int startPos)
     {
         String phrase = statement.trim();
         //  The only change to incorporate the startPos is in the line below
@@ -114,7 +107,7 @@ public class Accel
      * @param goal the string to search for
      * @return the index of the first occurrence of goal in statement or -1 if it's not found
      */
-    private int findKeyword(String statement, String goal)
+    private static int findKeyword(String statement, String goal)
     {
         return findKeyword (statement, goal, 0);
     }
