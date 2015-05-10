@@ -9,7 +9,7 @@ public class Computer
     /**
      * Responds to the statements provided by the other chatbots.
      */
-    public void getResponse(String statement)
+    public static String getResponse(String statement)
     {
         String response = "";
         if (findKeyword(statement, "There is something for me to manipulate here.") >= 0)
@@ -24,13 +24,7 @@ public class Computer
         {
             response = "Error Message #3: Intruders successfully exterminated.";
         }
-        System.out.println(response);
-    }
-    
-    public boolean check(String statement)
-    {
-        getResponse(statement);
-        return true;
+        return(response);
     }
 
     /**
@@ -41,7 +35,7 @@ public class Computer
      * @param startPos the character of the string to begin the search at
      * @return the index of the first occurrence of goal in statement or -1 if it's not found
      */
-    private int findKeyword(String statement, String goal, int startPos)
+    private static int findKeyword(String statement, String goal, int startPos)
     {
         String phrase = statement.trim();
         //  The only change to incorporate the startPos is in the line below
@@ -79,7 +73,7 @@ public class Computer
      * @param goal the string to search for
      * @return the index of the first occurrence of goal in statement or -1 if it's not found
      */
-    private int findKeyword(String statement, String goal)
+    private static int findKeyword(String statement, String goal)
     {
         return findKeyword (statement, goal, 0);
     }
