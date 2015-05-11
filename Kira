@@ -14,43 +14,43 @@ public class Kira
         String response = "";
         if (findKeyword(statement, "Waste of time…") >= 0)
         {
-            response = "No idea, although I wouldn’t suggest you destroy everything in a fit of rage.";
+            response = "Kira: No idea, although I wouldn’t suggest you destroy everything in a fit of rage.";
         }
         else if (findKeyword(statement, "You don’t have a chest.") >= 0)
         {
-            response = "*smacks Nanami* SHUT UP! You’re annoying!";
+            response = "Kira: *smacks Nanami* SHUT UP! You’re annoying!";
         } 
         else if (findKeyword(statement, "Don’t be mean to Nanami!") >= 0)
         {
-            response = "Do you want me to hurt you?";
+            response = "Kira: Do you want me to hurt you?";
         }
         else if (findKeyword(statement, "why do you have such a scary face on?") >= 0)
         {
-            response = "WHY DO YOU THINK, I GOT KICKED IN THE KNEE!";
+            response = "Kira: WHY DO YOU THINK, I GOT KICKED IN THE KNEE!";
         }
         else if (findKeyword(statement, "How did we even get here?") >= 0)
         {
-            response = "It’s not entirely fabricated. Using her electromagnetic abilities, she can bounce the waves off the surrounding area, similar to my ability with the air molecules. However, we’re clearly not in a room or in the physical universe, so Last Order is definitely lying.";
+            response = "Kira: It’s not entirely fabricated. Using her electromagnetic abilities, she can bounce the waves off the surrounding area, similar to my ability with the air molecules. However, we’re clearly not in a room or in the physical universe, so Last Order is definitely lying.";
         }
         else if (findKeyword(statement, "It’s obvious we’ve been transported to inside a machine.") >= 0)
         {
-            response = "Oi! You in front of the computer screen, why have we been transported here?";
+            response = "Kira: Oi! You in front of the computer screen, why have we been transported here?";
         }
         else if (findKeyword(statement, "I mean, come on bruh.") >= 0)
         {
-            response = "You just keep on testing me, don’t you?";
+            response = "Kira: You just keep on testing me, don’t you?";
         }
         else if (findKeyword(statement, "I, on the other hand…") >= 0)
         {
-            response = "Waaaiiit. If you mess with the electronic signals, we might never get out of here.";
+            response = "Kira: Waaaiiit. If you mess with the electronic signals, we might never get out of here.";
         }
         else if (findKeyword(statement, "Temper. Temper.") >= 0)
         {
-            response = "*throws a streak of lightning at the ground by Nanami and Miyumi* Accelerator, you were wrong. There is something for me to manipulate here.";
+            response = "Kira: *throws a streak of lightning at the ground by Nanami and Miyumi* Accelerator, you were wrong. There is something for me to manipulate here.";
         }
         else if (findKeyword(statement, " Get behind us and make sure Last Order and Ryuuri stay safe.") >= 0)
         {
-            response = "I wonder how much damage I can do to a computer...I don’t want to use electricity in case it makes things worse...Ehhh, this is hard.";
+            response = "Kira: I wonder how much damage I can do to a computer...I don’t want to use electricity in case it makes things worse...Ehhh, this is hard.";
         }
         return(response);
     }
@@ -59,9 +59,9 @@ public class Kira
     {
         Accel a = new Accel();
         String response = "";
-        if (a.startSilence("why have we been transported here?").equals("..."))
+        if (a.startSilence("why have we been transported here?").equals("Accelerator: ..."))
         {
-            response = "...";
+            response = "Kira: ...";
         }
         return(response);
     }
@@ -70,9 +70,9 @@ public class Kira
     {
         LastOrder l = new LastOrder();
         String response = "";
-        if (l.getSilence().equals("..."))
+        if (l.getSilence().equals("Last Order: ..."))
         {
-            response = "Tch. No response.";
+            response = "Kira: Tch. No response.";
         }
         return(response);
     }

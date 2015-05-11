@@ -11,7 +11,7 @@ public class Accel
      */
     public static String getOpening()
     {
-        return("Yo. Why did you scumbags call me here? Waste of time…");
+        return("Accelerator: Yo. Why did you scumbags call me here? Waste of time…");
     }
 
     /**
@@ -22,35 +22,35 @@ public class Accel
         String response = "";
         if (findKeyword(statement, "This could be important.") >=0)
         {
-            response = "Like that matters to me.";
+            response = "Accelerator: Like that matters to me.";
         }
         else if (findKeyword(statement, "Do you want me to hurt you?") >=0)
         {
-            response = "You're all childish.";
+            response = "Accelerator: You're all childish.";
         }
         else if (findKeyword(statement, "Victory is mine!") >= 0)
         {
-            response = "It's not like foolish things like that actually hurts you, stop yelling.";
+            response = "Accelerator: It's not like foolish things like that actually hurts you, stop yelling.";
         }
         else if (findKeyword(statement, "We don’t have time for this nonsense.") >= 0)
         {
-            response = "I have don’t time to be here. Last Order, let’s go.";
+            response = "Accelerator: I have don’t time to be here. Last Order, let’s go.";
         }
         else if (findKeyword(statement, "not in the physical universe") >= 0)
         {
-            response = "No. The only vectors I can feel are the electronic signals coming from the computer we’re currently trapped in. It’s obvious we’ve been transported to inside a machine.";
+            response = "Accelerator: No. The only vectors I can feel are the electronic signals coming from the computer we’re currently trapped in. It’s obvious we’ve been transported to inside a machine.";
         }
         else if (findKeyword(statement, "You just keep on testing me, don’t you?") >= 0)
         {
-            response = "Don’t bother attempting to attack her. Inside of a computer, there isn’t any Natural Energy for you to manipulate. I, on the other hand…";
+            response = "Accelerator: Don’t bother attempting to attack her. Inside of a computer, there isn’t any Natural Energy for you to manipulate. I, on the other hand…";
         }
         else if (findKeyword(statement, "Look what you did now.") >= 0)
         {
-            response = "*sighs* And you were the one that told me to restrain myself...Yet look what you did.";
+            response = "Accelerator: *sighs* And you were the one that told me to restrain myself...Yet look what you did.";
         }
         else if (findKeyword(statement, "Should we be concerned?") >= 0)
         {
-            response = "Probably. Get behind us and make sure Last Order and Ryuuri stay safe.";
+            response = "Accelerator: Probably. Get behind us and make sure Last Order and Ryuuri stay safe.";
         }
         return(response);
     }
@@ -60,7 +60,7 @@ public class Accel
         String response = "";
         if (findKeyword(statement, "why have we been transported here?") >= 0)
         {
-            response = "...";   
+            response = "Accelerator: ...";   
         }
         return response;
     }

@@ -14,15 +14,15 @@ public class Computer
         String response = "";
         if (findKeyword(statement, "There is something for me to manipulate here.") >= 0)
         {
-            response = "Error Message #1: There has been a problem regarding the electronic signals within the system. Attempt to fix. Fail.";
+            response = "Computer: Error Message #1: There has been a problem regarding the electronic signals within the system. Attempt to fix. Fail.";
         }
         else if (findKeyword(statement, "Yet look what you did.") >= 0)
         {
-            response = "Error Message #2: Intruders detected within the system. Searching for most effective method of extermination. Search completed. Proceeding with extermination.";
+            response = "Computer: Error Message #2: Intruders detected within the system. Searching for most effective method of extermination. Search completed. Proceeding with extermination.";
         }
         else if (findKeyword(statement, "I guess I’ll end this then.") >= 0)
         {
-            response = "Error Message #3: Intruders successfully exterminated.";
+            response = "Computer: Error Message #3: Intruders successfully exterminated.";
         }
         return(response);
     }

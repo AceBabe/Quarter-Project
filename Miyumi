@@ -20,35 +20,35 @@ public class Miyumi
         String response = "";
         if (findKeyword(statement, "wouldn’t suggest you destroy everything") >= 0)
         {
-            response = "Nii-san~ That’s not nice. This could be important.";
+            response = "Miyumi: Nii-san~ That’s not nice. This could be important.";
         }
         else if (findKeyword(statement, "Wah! says Misaka") >= 0)
         {
-            response = "*Kicks Kira in the knee* Don’t be mean to Nanami!";
+            response = "Miyumi: *Kicks Kira in the knee* Don’t be mean to Nanami!";
         }
         else if (findKeyword(statement, "all childish") >= 0)
         {
-            response = "I know~";
+            response = "Miyumi: I know~";
         }
         else if (findKeyword(statement, "Wah, scary") >= 0)
         {
-            response = "Ha! Victory is mine!";
+            response = "Miyumi: Ha! Victory is mine!";
         }
         else if (findKeyword(statement, "Waaaiiit") >= 0)
         {
-            response = "I don’t understand why you guys can’t all get along.";
+            response = "Miyumi: I don’t understand why you guys can’t all get along.";
         }
         else if (findKeyword(statement, "not my fault that they have such tempers") >= 0)
         {
-            response = "*Wags finger at Accelerator and Kira* Temper. Temper.";
+            response = "Miyumi: *Wags finger at Accelerator and Kira* Temper. Temper.";
         }
         else if (findKeyword(statement, "join you") >= 0)
         {
-            response = "...Nii-san~ Should we be concerned?";
+            response = "Miyumi: ...Nii-san~ Should we be concerned?";
         }
         else if (findKeyword(statement, "I wonder how much damage I can do to a computer") >= 0)
         {
-            response = "Okay Nii-san!";
+            response = "Miyumi: Okay Nii-san!";
         }
         return(response);
     }
@@ -60,9 +60,9 @@ public class Miyumi
     {
         Kira k = new Kira();
         String si = "";
-        if (k.getSilence().equals("..."))
+        if (k.getSilence().equals("Kira: ..."))
         {
-            si = "...";
+            si = "Miyumi: ...";
         }
         return(si);
     }

@@ -20,39 +20,39 @@ public class Nanami
         String response = "";
         if (findKeyword(statement, "Like that matters to me") >= 0)
         {
-            response = "Oh shut up. Stop being mean to your sister.";
+            response = "Nanami: Oh shut up. Stop being mean to your sister.";
         }
         else if (findKeyword(statement, "puffs out her chest with pride") >= 0)
         {
-            response = "Bruh. You don’t have a chest.";
+            response = "Nanami: Bruh. You don’t have a chest.";
         }
         else if (findKeyword(statement, "not like foolish things like that") >= 0)
         {
-            response = "Bruh. We don’t have time for this nonsense.";
+            response = "Nanami: Bruh. We don’t have time for this nonsense.";
         }
         else if (findKeyword(statement, "Misaka refuses!") >= 0)
         {
-            response = "How do you know that there’s another side of the room to run to?";
+            response = "Nanami: How do you know that there’s another side of the room to run to?";
         }
         else if (findKeyword(statement, "Misaka has a sixth sense for physical dimensions") >= 0)
         {
-            response = "Bruh. What are you talking about. How did we even get here?";
+            response = "Nanami: Bruh. What are you talking about. How did we even get here?";
         }
         else if (findKeyword(statement, "Tch. No response.") >= 0)
         {
-            response = "Did you really expect one? I mean, come on bruh.";
+            response = "Nanami: Did you really expect one? I mean, come on bruh.";
         }
         else if (findKeyword(statement, "why you guys can’t all get along") >= 0)
         {
-            response = "It’s not my fault that they have such tempers.";
+            response = "Nanami: It’s not my fault that they have such tempers.";
         }
         else if (findKeyword(statement, "Error Message #1") >= 0)
         {
-            response = "Bruh. Look what you did now.";
+            response = "Nanami: Bruh. Look what you did now.";
         }
         else if (findKeyword(statement, "Okay Nii-san!") >= 0)
         {
-            response = "*sighs* I guess I’ll end this then. *transfers everyone’s minds back to their bodies*";
+            response = "Nanami: *sighs* I guess I’ll end this then. *transfers everyone’s minds back to their bodies*";
         }
         return(response);
     }
@@ -64,9 +64,9 @@ public class Nanami
     {
         Miyumi m = new Miyumi();
         String si = "";
-        if (m.getSilence().equals("..."))
+        if (m.getSilence().equals("Miyumi: ..."))
         {
-            si = "...";
+            si = "Nanami: ...";
         }
         return(si);
     }

@@ -20,27 +20,27 @@ public class LastOrder
         String response = "";
         if (findKeyword(statement, "But I'm Ryuuri, ne!") >= 0)
         {
-            response = "You should’ve been paying attention! says Misaka as Misaka chastises the child in front of her.";
+            response = "Last Order: You should’ve been paying attention! says Misaka as Misaka chastises the child in front of her.";
         }
         else if (findKeyword(statement, "I’m a higher level") >= 0)
         {
-            response = "Your power doesn’t even have any destructive power like Misaka’s! says Misaka as Misaka puffs out her chest with pride.";
+            response = "Last Order: Your power doesn’t even have any destructive power like Misaka’s! says Misaka as Misaka puffs out her chest with pride.";
         }
         else if (findKeyword(statement, "*smacks Nanami*") >= 0)
         {
-            response = "Wah! says Misaka as Misaka runs away in fear!";
+            response = "Last Order: Wah! says Misaka as Misaka runs away in fear!";
         }
         else if (findKeyword(statement, "Last Order, let’s go.") >= 0)
         {
-            response = "Misaka refuses! says Misaka as Misaka runs to the other side of the room and clings to the wall!";
+            response = "Last Order: Misaka refuses! says Misaka as Misaka runs to the other side of the room and clings to the wall!";
         }
         else if (findKeyword(statement, "know that there’s another side") >= 0)
         {
-            response = "Misaka has a sixth sense for physical dimensions by using Misaka’s powers, says Misaka as Misaka heavily stretches the truth.";
+            response = "Last Order: Misaka has a sixth sense for physical dimensions by using Misaka’s powers, says Misaka as Misaka heavily stretches the truth.";
         }
         else if (findKeyword(statement, "Error Message #2") >= 0)
         {
-            response = "Misaka senses great danger! says Misaka as Misaka quickly hides!";
+            response = "Last Order: Misaka senses great danger! says Misaka as Misaka quickly hides!";
         }
         return(response);
     }
@@ -52,9 +52,9 @@ public class LastOrder
     {
         Ryuuri r = new Ryuuri();
         String si = "";
-        if (r.getSilence().equals("..."))
+        if (r.getSilence().equals("Ryuuri: ..."))
         {
-            si = "...";
+            si = "Last Order: ...";
         }
         return(si);
     }
