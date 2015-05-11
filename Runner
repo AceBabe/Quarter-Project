@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 /**
  * A class to run the bots and their prearranged conversation.
  * 
@@ -9,7 +8,6 @@ import java.util.ArrayList;
 public class Runner
 {
     private static ArrayList <String> store;
-
     public static void main(String [] args)
     {
         Accel accel = new Accel();
@@ -78,68 +76,76 @@ public class Runner
         store.add(kira.getResponse(store.get(x)));
         x++;
         store.add(ryuu.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(accel.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(kira.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(accel.startSilence(store.get(x)));
-        //         x++;
-        //         store.add(kira.getSilence());
-        //         x++;
-        //         store.add(miyu.getSilence());
-        //         x++;
-        //         store.add(nana.getSilence());
-        //         x++;
-        //         store.add(ryuu.getSilence());
-        //         x++;
-        //         store.add(last.getSilence());
-        //         x++;
-        //         store.add(kira.endSilence());
-        //         x++;
-        //         store.add(nana.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(kira.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(accel.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(kira.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(miyu.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(nana.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(miyu.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(kira.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(compute.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(nana.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(accel.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(compute.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(last.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(ryuu.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(miyu.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(accel.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(kira.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(miyu.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(nana.getResponse(store.get(x)));
-        //         x++;
-        //         store.add(compute.getResponse(store.get(x)));
+        x++;
+        store.add(accel.getResponse(store.get(x)));
+        x++;
+        store.add(kira.getResponse(store.get(x)));
+        x++;
+        store.add(accel.startSilence(store.get(x)));
+        x++;
+        store.add(kira.getSilence());
+        x++;
+        store.add(miyu.getSilence());
+        x++;
+        store.add(nana.getSilence());
+        x++;
+        store.add(ryuu.getSilence());
+        x++;
+        store.add(last.getSilence());
+        x++;
+        store.add(kira.endSilence());
+        x++;
+        store.add(nana.getResponse(store.get(x)));
+        x++;
+        store.add(kira.getResponse(store.get(x)));
+        x++;
+        store.add(accel.getResponse(store.get(x)));
+        x++;
+        store.add(kira.getResponse(store.get(x)));
+        x++;
+        store.add(miyu.getResponse(store.get(x)));
+        x++;
+        store.add(nana.getResponse(store.get(x)));
+        x++;
+        store.add(miyu.getResponse(store.get(x)));
+        x++;
+        store.add(kira.getResponse(store.get(x)));
+        x++;
+        store.add(compute.getResponse(store.get(x)));
+        x++;
+        store.add(nana.getResponse(store.get(x)));
+        x++;
+        store.add(accel.getResponse(store.get(x)));
+        x++;
+        store.add(compute.getResponse(store.get(x)));
+        x++;
+        store.add(last.getResponse(store.get(x)));
+        x++;
+        store.add(ryuu.getResponse(store.get(x)));
+        x++;
+        store.add(miyu.getResponse(store.get(x)));
+        x++;
+        store.add(accel.getResponse(store.get(x)));
+        x++;
+        store.add(kira.getResponse(store.get(x)));
+        x++;
+        store.add(miyu.getResponse(store.get(x)));
+        x++;
+        store.add(nana.getResponse(store.get(x)));
+        x++;
+        store.add(compute.getResponse(store.get(x)));
 
         for (String q: store)
         {
             System.out.println(q);
+            try
+            {
+                Thread.sleep((int)(Math.random()*3000));
+            }
+            catch (Exception e)
+            {
+                
+            }
         }
     }
 

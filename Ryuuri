@@ -38,7 +38,9 @@ public class Ryuuri
         }
         return(response);
     }
-
+    /**
+     * Continues the area of the conversation where the characters are cycling through a period of silence.
+     */
     public static String getSilence()
     {
         Nanami n = new Nanami();

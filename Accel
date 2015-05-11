@@ -54,7 +54,9 @@ public class Accel
         }
         return(response);
     }
-
+    /**
+     * Starts the area of the conversation where the characters are cycling through a period of silence.
+     */
     public static String startSilence(String statement)
     {
         String response = "";

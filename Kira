@@ -54,7 +54,9 @@ public class Kira
         }
         return(response);
     }
-
+    /**
+     * Continues the area of the conversation where the characters are cycling through a period of silence.
+     */
     public static String getSilence()
     {
         Accel a = new Accel();
@@ -65,7 +67,9 @@ public class Kira
         }
         return(response);
     }
-
+    /**
+     * Ends the area of the conversation where the characters are cycling through a period of silence.
+     */
     public static String endSilence()
     {
         LastOrder l = new LastOrder();
