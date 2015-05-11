@@ -55,28 +55,26 @@ public class Kira
         return(response);
     }
 
-    public static boolean getSilence()
+    public static String getSilence()
     {
         Accel a = new Accel();
         String response = "";
-        if (a.startSilence("why have we been transported here?").equals("why have we been transported here?"))
+        if (a.startSilence("why have we been transported here?").equals("..."))
         {
             response = "...";
         }
-        System.out.println(response);
-        return true;
+        return(response);
     }
 
-    public static boolean endSilence()
+    public static String endSilence()
     {
         LastOrder l = new LastOrder();
         String response = "";
-        if (l.getSilence() == true)
+        if (l.getSilence().equals("..."))
         {
             response = "Tch. No response.";
         }
-        System.out.println(response);
-        return true;
+        return(response);
     }
 
     private static int findKeyword(String statement, String goal, int startPos)
