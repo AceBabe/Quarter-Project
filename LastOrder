@@ -48,16 +48,15 @@ public class LastOrder
     /**
      * To continue the response of silence
      */
-    public static boolean getSilence()
+    public static String getSilence()
     {
         Ryuuri r = new Ryuuri();
         String si = "";
-        if (r.getSilence() == true)
+        if (r.getSilence().equals("..."))
         {
             si = "...";
         }
-        System.out.println(si);
-        return true;
+        return(si);
     }
 
     /**
