@@ -26,7 +26,7 @@ public class Nanami
         {
             response = "Bruh. You don’t have a chest.";
         }
-        else if (findKeyword(statement, "not like foolish things like that actually hurts you") >= 0)
+        else if (findKeyword(statement, "not like foolish things like that") >= 0)
         {
             response = "Bruh. We don’t have time for this nonsense.";
         }
@@ -60,16 +60,15 @@ public class Nanami
     /**
      * To continue the response of silence
      */
-    public static boolean getSilence()
+    public static String getSilence()
     {
         Miyumi m = new Miyumi();
         String si = "";
-        if (m.getSilence() == true)
+        if (m.getSilence().equals("..."))
         {
             si = "...";
         }
-        System.out.println(si);
-        return true;
+        return(si);
     }
 
     /**
