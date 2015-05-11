@@ -26,7 +26,7 @@ public class Miyumi
         {
             response = "*Kicks Kira in the knee* Don’t be mean to Nanami!";
         }
-        else if (findKeyword(statement, "You’re all childish.") >= 0)
+        else if (findKeyword(statement, "all childish") >= 0)
         {
             response = "I know~";
         }
