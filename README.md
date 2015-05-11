@@ -9,4 +9,4 @@ PURPOSE OF PROJECT: Chat bots having a prepared converstaion
 VERSION or DATE: 4
 HOW TO START THIS PROJECT: Run main method in the Runner class
 AUTHORS: Alyssa + Dayna Lei
-USER INSTRUCTIONS: None.
+USER INSTRUCTIONS: Uncomment lines 81 to 138 to read the rest of the conversation.
