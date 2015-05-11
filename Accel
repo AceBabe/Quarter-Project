@@ -36,6 +36,10 @@ public class Accel
         {
             response = "I have don’t time to be here. Last Order, let’s go.";
         }
+        else if (findKeyword(statement, "not in the physical universe") >= 0)
+        {
+            response = "No. The only vectors I can feel are the electronic signals coming from the computer we’re currently trapped in. It’s obvious we’ve been transported to inside a machine.";
+        }
         else if (findKeyword(statement, "You just keep on testing me, don’t you?") >= 0)
         {
             response = "Don’t bother attempting to attack her. Inside of a computer, there isn’t any Natural Energy for you to manipulate. I, on the other hand…";
