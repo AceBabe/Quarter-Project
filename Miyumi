@@ -30,11 +30,11 @@ public class Miyumi
         {
             response = "I know~";
         }
-        else if (findKeyword(statement, "Wah, scary…") >= 0)
+        else if (findKeyword(statement, "Wah, scary") >= 0)
         {
             response = "Ha! Victory is mine!";
         }
-        else if (findKeyword(statement, "Waaaiiit. If you mess with the electronic signals,") >= 0)
+        else if (findKeyword(statement, "Waaaiiit") >= 0)
         {
             response = "I don’t understand why you guys can’t all get along.";
         }
@@ -42,7 +42,7 @@ public class Miyumi
         {
             response = "*Wags finger at Accelerator and Kira* Temper. Temper.";
         }
-        else if (findKeyword(statement, "I’ll join you!") >= 0)
+        else if (findKeyword(statement, "join you") >= 0)
         {
             response = "...Nii-san~ Should we be concerned?";
         }
@@ -56,16 +56,15 @@ public class Miyumi
     /**
      * To continue the response of silence
      */
-    public static boolean getSilence()
+    public static String getSilence()
     {
         Kira k = new Kira();
         String si = "";
-        if (k.getSilence() == true)
+        if (k.getSilence().equals("..."))
         {
             si = "...";
         }
-        System.out.println(si);
-        return true;
+        return(si);
     }
 
     /**
