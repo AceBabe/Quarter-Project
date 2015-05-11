@@ -39,16 +39,15 @@ public class Ryuuri
         return(response);
     }
 
-    public static boolean getSilence()
+    public static String getSilence()
     {
         Nanami n = new Nanami();
         String response = "";
-        if (n.getSilence() == true)
+        if (n.getSilence().equals("..."))
         {
             response = "...";
         }
-        System.out.println(response);
-        return true;
+        return(response);
     }
 
     private static int findKeyword(String statement, String goal, int startPos)
